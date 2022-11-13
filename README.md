@@ -19,7 +19,9 @@ As telas do jogo serão colocadas posteriormente
 **Linguagem**: Pyhton<br>
 **Framework**: PyGame<br>
 
-´´´python main.py´´´
+```bash
+python main.py
+```
 
 ## Uso 
 Super intuitivo (ou não), se joga e joga!
