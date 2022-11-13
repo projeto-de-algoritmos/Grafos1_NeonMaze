@@ -1,4 +1,4 @@
-# NomedoProjeto
+# Neon Maze
 
 **Conteúdo da Disciplina**: Grafos 1 - DFS<br>
 
@@ -26,3 +26,4 @@ Super intuitivo (ou não), se joga e joga!
 
 ## Outros 
 Construção em andamento.
+
