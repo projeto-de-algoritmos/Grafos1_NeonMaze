@@ -9,7 +9,7 @@
 | 200019228  |  Gustavo Martins Ribeiro |
 
 # Sobre 
-Jorginho é um filhote de ET muito serelepinho e está brincando de esconde-esconde com seus amiguinhos. Contudo, a fim de se esconderem de Jorginho, seus amigos se enfiaram em um local de difícil acesso. No entando, o famoso PAC-MAN, um dos maiores personagens da história dos video games resurge das cinzas para abrir caminho para o jorginho, mas nem tudo é de graça: o PAC-MAN tava locão e acabou gerando um labirinto neon psicodélico. Sua missão é guiar o Jorginho até seus amigos para que ele possa vencer a brincadeira e jogar na cara dos seus amigos. 
+Jorginho é um filhote de ET muito serelepinho e está brincando de esconde-esconde com seus amiguinhos. Contudo, a fim de se esconderem de Jorginho, seus amigos se enfiaram em um local de difícil acesso. No entando, o famoso PAC-MAN, um dos maiores personagens da história dos video games resurge das cinzas para abrir caminho para o jorginho, mas nem tudo é de graça: o PAC-MAN tava locão e acabou gerando um labirinto neon psicodélico. Sua missão é guiar o Jorginho até seus amigos para que ele possa vencer a brincadeira e jogar na cara dos seus amigos que ele é o rei do pique-esconde! 
 
 Boa sorte nessa empreitada!
 
@@ -32,7 +32,7 @@ Boa sorte nessa empreitada!
 
 # Instalação 
 **Linguagem**: Pyhton<br>
-**Framework**: PyGame<br>
+**Bibliotecas**: PyGame e button <br>
 
 ```bash
 python main.py
