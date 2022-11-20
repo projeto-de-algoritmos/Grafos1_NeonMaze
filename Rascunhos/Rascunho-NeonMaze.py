@@ -1,7 +1,7 @@
 from CreateMazeMap import *
 
 
-def is_collide(x, y):
+def is_collide(x, y): #verifica se o jogador colidiu com alguma parede
     tmp_rect = player_rect.move(x, y)
     if tmp_rect.collidelist(colisõesDeParedes) == -1:
         return False
