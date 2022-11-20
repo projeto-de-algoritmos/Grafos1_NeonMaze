@@ -37,6 +37,8 @@ Boa sorte nessa empreitada!
 **Linguagem**: Pyhton<br>
 **Bibliotecas**: PyGame e button <br>
 
+>A resolução padrão configurada é de 1350x670, então caso a resoluçao do seu sistema seja menor do que a configurada, sinta-se livre para mudar os parâmetros de ```altura``` e ```largura``` presentes nas primeiras linhas do arquivo ```\main.py```.
+
 ```bash
 pip install pygame
 pip install button
