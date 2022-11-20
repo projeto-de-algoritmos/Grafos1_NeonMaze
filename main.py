@@ -49,8 +49,11 @@ player_img = py.transform.scale(player_img, (bloco - 2 * 4, bloco - 2 * 4))
 player_rect = player_img.get_rect()
 player_rect.center = bloco // 2, bloco // 2
 directions = {'a': (-player_speed, 0), 'd': (player_speed, 0),
-              'w': (0, -player_speed), 's': (0, player_speed)}
-teclas = {'a': py.K_a, 'd': py.K_d, 'w': py.K_w, 's': py.K_s}
+              'w': (0, -player_speed), 's': (0, player_speed),
+              'left': (-player_speed, 0), 'right': (player_speed, 0),
+              'up': (0, -player_speed), 'down': (0, player_speed)}
+teclas = {'a': py.K_a, 'd': py.K_d, 'w': py.K_w, 's': py.K_s,
+          'left': py.K_LEFT, 'right': py.K_RIGHT, 'up': py.K_UP, 'down': py.K_DOWN}
 direction = (0, 0)
 
 celula_final_img = py.image.load('img/bondeDosET.png').convert_alpha()
