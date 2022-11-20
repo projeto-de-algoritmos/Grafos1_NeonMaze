@@ -30,6 +30,9 @@ Boa sorte nessa empreitada!
 ![LabirintoNeonGame](https://user-images.githubusercontent.com/72039007/202893948-eb9756a3-f6be-442a-9681-4e31857556c7.png)
 ### *Imagem 5* - Labirinto aleatório gerado por DFS & Backtraking
 
+## 3) Tela de Vitória
+![image](https://user-images.githubusercontent.com/72039007/202894613-18a6324a-d0e6-41be-9d80-01e792196d01.png)
+### *Imagem 6* - Reconhecimento dos amiguinhos quando o jorginho vence
 # Instalação 
 **Linguagem**: Pyhton<br>
 **Bibliotecas**: PyGame e button <br>
