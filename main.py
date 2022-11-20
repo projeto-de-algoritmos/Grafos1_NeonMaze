@@ -256,18 +256,21 @@ rodando = menu()  # chama a função menu e armazena o valor retornado na variav
 
 def telaDeVitoria():
     while True:
+        #aplicar uma tela preta para a tela de vitória
+        tela.fill((0, 0, 0))
+
         # coloca a imagem de fundo na tela
-        tela.blit(fundo3, (0, 0))
+        tela.blit(fundo3, (0, 50))
         # cria os textos do menu com a fonte neon na pasta font
         txt1 = py.font.Font('font/Monoton-Regular.ttf', 100).render('Você venceu!',
-                                                                    True, ("Green")).get_rect(center=(largura // 2, altura // 2 - 200))
+                            True, ("Green")).get_rect(center=(largura // 2, altura // 2 - 250))
         txt2 = py.font.Font('font/Monoton-Regular.ttf', 20).render('Pressione qualquer tecla para sair',
-                                                                   True, ("Green")).get_rect(center=(largura // 2, altura // 2 + 300))
+                            True, ("Green")).get_rect(center=(largura // 2, altura // 2 + 300))
         # coloca os textos na tela
         tela.blit(py.font.Font('font/Monoton-Regular.ttf',
                   100).render('Você venceu!', True, ("Green")), txt1)
         tela.blit(py.font.Font('font/Monoton-Regular.ttf', 20).render(
-            'Pressione qualquer tecla para sairr', True, ("Green")), txt2)
+            'Pressione         qualquer         tecla         para         sair', True, ("Green")), txt2)
 
         # atualiza a tela
         py.display.update()
