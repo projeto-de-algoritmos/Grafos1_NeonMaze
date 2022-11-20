@@ -86,14 +86,14 @@ def menu():
         tela.blit(fundo2, (0, 0))
         # cria os textos do menu com a fonte neon na pasta font
         txt1 = py.font.Font('font/Monoton-Regular.ttf', 100).render('Neon Maze',
-                                                                    True, ("Blue")).get_rect(center=(largura // 2, altura // 2 - 200))
+                            True, ("Blue")).get_rect(center=(largura // 2, altura // 2 - 200))
         txt2 = py.font.Font('font/Monoton-Regular.ttf', 20).render('Pressione qualquer tecla para começar',
-                                                                   True, ("Blue")).get_rect(center=(largura // 2, altura // 2 + 200))
+                            True, ("Blue")).get_rect(center=(largura // 2, altura // 2 + 200))
         # coloca os textos na tela
         tela.blit(py.font.Font('font/Monoton-Regular.ttf',
                   100).render('Neon Maze', True, ("Gold")), txt1)
         tela.blit(py.font.Font('font/Monoton-Regular.ttf', 20).render(
-            'Pressione qualquer tecla para começar', True, ("Gold")), txt2)
+        'Pressione        qualquer        tecla        para        começar', True, ("Gold")), txt2)
 
         # atualiza a tela
         py.display.update()
