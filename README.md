@@ -38,9 +38,9 @@ Boa sorte nessa empreitada!
 **Bibliotecas**: PyGame e button <br>
 
 ```bash
-python main.py
 pip install pygame
 pip install button
+python main.py
 ```
 
 # Uso 
