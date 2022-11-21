@@ -37,7 +37,7 @@ Boa sorte nessa empreitada!
 **Linguagem**: Pyhton<br>
 **Bibliotecas**: PyGame e button <br>
 
->A resolução padrão configurada para esse projeto é de 1350x670, então caso a resoluçao do seu sistema seja menor, sinta-se livre para mudar os parâmetros de ```altura``` e ```largura``` presentes nas primeiras linhas do arquivo ```\main.py```.
+>A resolução padrão configurada para este projeto é de 1352x652 para melhor visualização do labirinto. Caso a resolução do seu sistema seja menor, sinta-se livre para mudar os parâmetros de ```altura``` e ```largura``` presentes nas primeiras linhas do arquivo ```\main.py```.
 
 ```bash
 pip install pygame
@@ -46,4 +46,4 @@ python main.py
 ```
 
 # Uso 
-O jorginho pode ser movimentando usando as teclas W(cima), A(esquerda), S(embaixo) e D(direita). Divirta-se!
+O jorginho pode ser movimentando usando as teclas W(cima), A(esquerda), S(embaixo) e D(direita) e também usando os direcionais do teclado. Divirta-se!

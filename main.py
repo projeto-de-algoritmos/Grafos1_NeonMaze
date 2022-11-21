@@ -5,8 +5,8 @@ from button import *
 import sys
 
 # resolução da tela
-largura = 1350
-altura = 670
+largura = 1352
+altura = 652
 
 # tamanho do bloco
 bloco = 50
