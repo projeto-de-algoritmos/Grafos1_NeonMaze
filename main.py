@@ -349,7 +349,7 @@ while rodando:
         vitoria.play()
         vitoria.set_volume(1)
         # trava o jogo e vai pra tela de vitória
-        py.time.delay(3000)
+        py.time.delay(1850)
         py.time.delay(0)
         rodando = telaDeVitoria()
 
