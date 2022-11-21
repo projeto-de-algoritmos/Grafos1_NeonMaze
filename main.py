@@ -69,6 +69,9 @@ celula_atual_img = py.transform.scale(
 celula_atual_rect = celula_atual_img.get_rect()
 celula_atual_rect.center = bloco // 2, bloco // 2
 
+# define o icone da janela
+py.display.set_icon(celula_atual_img)
+
 
 # verifica se o jogador colidiu com alguma parede
 def is_collide(x, y):
@@ -102,7 +105,7 @@ def menu():
             if event.type == py.KEYDOWN:
                 if event.key ==  py.K_ESCAPE:
                     return False
-                if event.key ==  py.K_RETURN or event.key == py.K_KP_ENTER:
+                if event.key ==  py.K_RETURN or event.key ==  py.K_KP_ENTER or event.key ==  py.K_SPACE:
                     return True
             if event.type == py.QUIT:
                 return False
