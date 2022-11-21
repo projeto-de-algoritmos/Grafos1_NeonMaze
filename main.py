@@ -1,7 +1,7 @@
 import pygame as py  # biblioteca para criar o jogo
 # biblioteca para escolher aleatoriamente um elemento de uma lista
 from random import choice
-from button import *
+# from button import *
 import sys
 
 # resolução da tela
@@ -90,13 +90,13 @@ def menu():
         # cria os textos do menu com a fonte neon na pasta font
         txt1 = py.font.Font('./font/Monoton-Regular.ttf', 100).render('Neon Maze',
                             True, ('Blue')).get_rect(center=(largura // 2, altura // 2 - 200))
-        txt2 = py.font.Font('./font/Monoton-Regular.ttf', 20).render('Pressione        ENTER        para        começar        ou        ESC        para        sair',
+        txt2 = py.font.Font('./font/Monoton-Regular.ttf', 20).render('Pressione        ENTER/ESPAÇO        para        começar        ou        ESC        para        sair',
                             True, ('Blue')).get_rect(center=(largura // 2, altura // 2 + 200))
         # coloca os textos na tela
         tela.blit(py.font.Font('./font/Monoton-Regular.ttf',
                   100).render('Neon Maze', True, ('Gold')), txt1)
         tela.blit(py.font.Font('./font/Monoton-Regular.ttf', 20).render(
-        'Pressione        ENTER        para        começar        ou        ESC        para        sair', True, ('Gold')), txt2)
+        'Pressione        ENTER/ESPAÇO        para        começar        ou        ESC        para        sair', True, ('Gold')), txt2)
 
         # atualiza a tela
         py.display.update()
@@ -265,20 +265,21 @@ def telaDeVitoria():
         # cria os textos do menu com a fonte neon na pasta font
         txt1 = py.font.Font('./font/Monoton-Regular.ttf', 100).render('Você venceu!',
                             True, ('Green')).get_rect(center=(largura // 2, altura // 2 - 250))
-        txt2 = py.font.Font('./font/Monoton-Regular.ttf', 20).render('Pressione qualquer tecla para sair',
+        txt2 = py.font.Font('./font/Monoton-Regular.ttf', 20).render('Pressione        ESC        para        sair',
                             True, ('Green')).get_rect(center=(largura // 2, altura // 2 + 300))
         # coloca os textos na tela
         tela.blit(py.font.Font('./font/Monoton-Regular.ttf',
                   100).render('Você venceu!', True, ('Green')), txt1)
         tela.blit(py.font.Font('./font/Monoton-Regular.ttf', 20).render(
-            'Pressione         qualquer         tecla         para         sair', True, ('Green')), txt2)
+            'Pressione        ESC        para        sair', True, ('Green')), txt2)
 
         # atualiza a tela
         py.display.update()
         # verifica se alguma tecla foi pressionada
         for event in py.event.get():
             if event.type == py.KEYDOWN:
-                return False
+                if event.key ==  py.K_ESCAPE:
+                    return False
             if event.type == py.QUIT:
                 return False
 

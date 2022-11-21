@@ -41,7 +41,6 @@ Boa sorte nessa empreitada!
 
 ```bash
 pip install pygame
-pip install button
 python main.py
 ```
 
