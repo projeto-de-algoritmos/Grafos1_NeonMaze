@@ -261,7 +261,7 @@ rodando = menu()  # chama a função menu e armazena o valor retornado na variav
 def telaDeVitoria():
     while True:
         #aplicar uma tela preta para a tela de vitória
-        tela.fill((0, 0, 0))
+        #tela.fill((0, 0, 0))
 
         # coloca a imagem de fundo na tela
         tela.blit(fundo3, (0, 50))
