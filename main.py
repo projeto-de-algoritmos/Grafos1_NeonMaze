@@ -87,24 +87,25 @@ def menu():
         # cria os textos do menu com a fonte neon na pasta font
         txt1 = py.font.Font('font/Monoton-Regular.ttf', 100).render('Neon Maze',
                             True, ("Blue")).get_rect(center=(largura // 2, altura // 2 - 200))
-        txt2 = py.font.Font('font/Monoton-Regular.ttf', 20).render('Pressione qualquer tecla para começar',
+        txt2 = py.font.Font('font/Monoton-Regular.ttf', 20).render('Pressione        ENTER        para        começar        ou        ESC        para        sair',
                             True, ("Blue")).get_rect(center=(largura // 2, altura // 2 + 200))
         # coloca os textos na tela
         tela.blit(py.font.Font('font/Monoton-Regular.ttf',
                   100).render('Neon Maze', True, ("Gold")), txt1)
         tela.blit(py.font.Font('font/Monoton-Regular.ttf', 20).render(
-        'Pressione        qualquer        tecla        para        começar', True, ("Gold")), txt2)
+        'Pressione        ENTER        para        começar        ou        ESC        para        sair', True, ("Gold")), txt2)
 
         # atualiza a tela
         py.display.update()
         # verifica se alguma tecla foi pressionada
         for event in py.event.get():
             if event.type == py.KEYDOWN:
-                # se alguma tecla foi pressionada, sai do loop e inicia o jogo
-                return True
+                if event.key ==  py.K_ESCAPE:
+                    return False
+                if event.key ==  py.K_RETURN or event.key == py.K_KP_ENTER:
+                    return True
             if event.type == py.QUIT:
-                py.quit()
-                exit()
+                return False
 
 # criando a classe da celula
 
@@ -289,10 +290,16 @@ while rodando:
     tela.blit(fundo, (0, 0))  # desenha a imagem de fundo na tela (background)
 
     for event in py.event.get():  # verifica os eventos
-        if event.type == py.QUIT:  # se o evento for o botão de fechar a janela
+        if event.type == py.QUIT:  # se o evento for o botão de fechar a janela    
             py.mixer.music.stop()  # para a música de fundo
             rodando = False  # encerra o jogo
             exit()  # encerra o programa
+        if event.type == py.KEYDOWN:  # se o evento for uma tecla pressionada
+            if event.key == py.K_ESCAPE:  # se a tecla for ESC
+                py.mixer.music.stop()  # para a música de fundo
+                rodando = False  # encerra o jogo
+                exit()  # encerra o programa
+
 
     # controles e movimentos do jogador
     teclaPrecionada = py.key.get_pressed()
