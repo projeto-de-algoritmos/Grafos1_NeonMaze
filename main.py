@@ -5,7 +5,7 @@ from button import *
 import sys
 
 # resolução da tela
-largura = 1352
+largura = 1252
 altura = 652
 
 # tamanho do bloco
@@ -18,33 +18,33 @@ cols, rows = largura // bloco, altura // bloco
 # criando uma estrutura padrão do pygame
 py.init()  # inicializa o pygame
 tela = py.display.set_mode((largura, altura))  # cria a tela
-py.display.set_caption("Neon Maze")  # define o título da janela
+py.display.set_caption('Neon Maze')  # define o título da janela
 clock = py.time.Clock()  # cria um relógio para controlar a velocidade do jogo
 
 # carregando imagens
-fundo = py.image.load("img/neonCity.jpg")  # carrega a imagem de fundo
+fundo = py.image.load('./img/neonCity.jpg')  # carrega a imagem de fundo
 # redimensiona a imagem de fundo para o tamanho da tela
 fundo = py.transform.scale(fundo, (largura, altura))
 # aplica um filtro de suavização na imagem de fundo
 fundo = py.transform.smoothscale(fundo, (largura, altura))
-fundo2 = py.image.load("img/neonCity2.png")
+fundo2 = py.image.load('./img/neonCity2.png')
 fundo2 = py.transform.scale(fundo2, (largura, altura))
 fundo2 = py.transform.smoothscale(fundo2, (largura, altura))
-fundo3 = py.image.load("img/bondeDosEt.png")
+fundo3 = py.image.load('./img/bondeDosET.png')
 fundo3 = py.transform.scale(fundo3, (largura, altura))
 fundo3 = py.transform.smoothscale(fundo3, (largura, altura))
 
 # carregando musica
 py.mixer.init()  # inicializa o mixer do pygame
 # carrega a música que será tocada no jogo
-py.mixer.music.load('music/topGear.mp3')
+py.mixer.music.load('./music/TopGear.mp3')
 py.mixer.music.set_volume(1)  # define o volume da música de fundo
 py.mixer.music.play(-1)  # reproduz a música de fundo em loop
 
 
 # configurando o jogador
 player_speed = 5
-player_img = py.image.load('img/etzinho.png').convert_alpha()
+player_img = py.image.load('./img/etzinho.png').convert_alpha()
 player_img = py.transform.scale(player_img, (bloco - 2 * 4, bloco - 2 * 4))
 player_rect = player_img.get_rect()
 player_rect.center = bloco // 2, bloco // 2
@@ -56,14 +56,14 @@ teclas = {'a': py.K_a, 'd': py.K_d, 'w': py.K_w, 's': py.K_s,
           'left': py.K_LEFT, 'right': py.K_RIGHT, 'up': py.K_UP, 'down': py.K_DOWN}
 direction = (0, 0)
 
-celula_final_img = py.image.load('img/bondeDosET.png').convert_alpha()
+celula_final_img = py.image.load('./img/bondeDosET.png').convert_alpha()
 celula_final_img = py.transform.scale(
     celula_final_img, (bloco - 2 * 4, bloco - 2 * 4))
 celula_final_rect = celula_final_img.get_rect()
 celula_final_rect.center = (cols - 1) * bloco + \
     bloco // 2, (rows - 1) * bloco + bloco // 2
 
-celula_atual_img = py.image.load('img/pacman.png').convert_alpha()
+celula_atual_img = py.image.load('./img/pacman.png').convert_alpha()
 celula_atual_img = py.transform.scale(
     celula_atual_img, (bloco - 2 * 4, bloco - 2 * 4))
 celula_atual_rect = celula_atual_img.get_rect()
@@ -88,15 +88,15 @@ def menu():
         # coloca a imagem de fundo na tela
         tela.blit(fundo2, (0, 0))
         # cria os textos do menu com a fonte neon na pasta font
-        txt1 = py.font.Font('font/Monoton-Regular.ttf', 100).render('Neon Maze',
-                            True, ("Blue")).get_rect(center=(largura // 2, altura // 2 - 200))
-        txt2 = py.font.Font('font/Monoton-Regular.ttf', 20).render('Pressione        ENTER        para        começar        ou        ESC        para        sair',
-                            True, ("Blue")).get_rect(center=(largura // 2, altura // 2 + 200))
+        txt1 = py.font.Font('./font/Monoton-Regular.ttf', 100).render('Neon Maze',
+                            True, ('Blue')).get_rect(center=(largura // 2, altura // 2 - 200))
+        txt2 = py.font.Font('./font/Monoton-Regular.ttf', 20).render('Pressione        ENTER        para        começar        ou        ESC        para        sair',
+                            True, ('Blue')).get_rect(center=(largura // 2, altura // 2 + 200))
         # coloca os textos na tela
-        tela.blit(py.font.Font('font/Monoton-Regular.ttf',
-                  100).render('Neon Maze', True, ("Gold")), txt1)
-        tela.blit(py.font.Font('font/Monoton-Regular.ttf', 20).render(
-        'Pressione        ENTER        para        começar        ou        ESC        para        sair', True, ("Gold")), txt2)
+        tela.blit(py.font.Font('./font/Monoton-Regular.ttf',
+                  100).render('Neon Maze', True, ('Gold')), txt1)
+        tela.blit(py.font.Font('./font/Monoton-Regular.ttf', 20).render(
+        'Pressione        ENTER        para        começar        ou        ESC        para        sair', True, ('Gold')), txt2)
 
         # atualiza a tela
         py.display.update()
@@ -147,17 +147,17 @@ class Celula:
         # se a celula ainda não foi visitada, ela é pintada de dourado
         if self.paredes['encima']:
             # desenha a parede de cima
-            py.draw.line(tela, ("Gold"), (x, y), (x + bloco, y), 4)
+            py.draw.line(tela, ('Gold'), (x, y), (x + bloco, y), 4)
         if self.paredes['direita']:
             # desenha a parede da direita
-            py.draw.line(tela, ("Gold"), (x + bloco, y),
+            py.draw.line(tela, ('Gold'), (x + bloco, y),
                          (x + bloco, y + bloco), 4)
         if self.paredes['embaixo']:
-            py.draw.line(tela, ("Gold"), (x + bloco, y + bloco),
+            py.draw.line(tela, ('Gold'), (x + bloco, y + bloco),
                          (x, y + bloco), 4)  # desenha a parede de baixo
         if self.paredes['esquerda']:
             # desenha a parede da esquerda
-            py.draw.line(tela, ("Gold"), (x, y + bloco), (x, y), 4)
+            py.draw.line(tela, ('Gold'), (x, y + bloco), (x, y), 4)
 
     # desenha a celula atual
     def desenha_celula_atual(self):
@@ -260,21 +260,18 @@ rodando = menu()  # chama a função menu e armazena o valor retornado na variav
 
 def telaDeVitoria():
     while True:
-        #aplicar uma tela preta para a tela de vitória
-        #tela.fill((0, 0, 0))
-
         # coloca a imagem de fundo na tela
         tela.blit(fundo3, (0, 50))
         # cria os textos do menu com a fonte neon na pasta font
-        txt1 = py.font.Font('font/Monoton-Regular.ttf', 100).render('Você venceu!',
-                            True, ("Green")).get_rect(center=(largura // 2, altura // 2 - 250))
-        txt2 = py.font.Font('font/Monoton-Regular.ttf', 20).render('Pressione qualquer tecla para sair',
-                            True, ("Green")).get_rect(center=(largura // 2, altura // 2 + 300))
+        txt1 = py.font.Font('./font/Monoton-Regular.ttf', 100).render('Você venceu!',
+                            True, ('Green')).get_rect(center=(largura // 2, altura // 2 - 250))
+        txt2 = py.font.Font('./font/Monoton-Regular.ttf', 20).render('Pressione qualquer tecla para sair',
+                            True, ('Green')).get_rect(center=(largura // 2, altura // 2 + 300))
         # coloca os textos na tela
-        tela.blit(py.font.Font('font/Monoton-Regular.ttf',
-                  100).render('Você venceu!', True, ("Green")), txt1)
-        tela.blit(py.font.Font('font/Monoton-Regular.ttf', 20).render(
-            'Pressione         qualquer         tecla         para         sair', True, ("Green")), txt2)
+        tela.blit(py.font.Font('./font/Monoton-Regular.ttf',
+                  100).render('Você venceu!', True, ('Green')), txt1)
+        tela.blit(py.font.Font('./font/Monoton-Regular.ttf', 20).render(
+            'Pressione         qualquer         tecla         para         sair', True, ('Green')), txt2)
 
         # atualiza a tela
         py.display.update()
@@ -289,7 +286,7 @@ def telaDeVitoria():
 while rodando:
     # Desenhando o fundo
     # preenche a tela com a cor preta (background)
-    tela.fill(py.Color("black"))
+    tela.fill(py.Color('black'))
     tela.blit(fundo, (0, 0))  # desenha a imagem de fundo na tela (background)
 
     for event in py.event.get():  # verifica os eventos
@@ -345,7 +342,7 @@ while rodando:
     if player_rect.colliderect(celula_final_rect):
         py.mixer.music.stop()  # para a música de fundo
         # carrega o som de vitória e toca
-        vitoria = py.mixer.Sound('music/vitoria.wav')
+        vitoria = py.mixer.Sound('./music/vitoria.wav')
         vitoria.play()
         vitoria.set_volume(1)
         # trava o jogo e vai pra tela de vitória

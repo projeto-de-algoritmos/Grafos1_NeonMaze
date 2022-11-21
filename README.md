@@ -37,7 +37,7 @@ Boa sorte nessa empreitada!
 **Linguagem**: Pyhton<br>
 **Bibliotecas**: PyGame e button <br>
 
->A resolução padrão configurada para este projeto é de 1352x652 para melhor visualização do labirinto. Caso a resolução do seu sistema seja menor, sinta-se livre para mudar os parâmetros de ```altura``` e ```largura``` presentes nas primeiras linhas do arquivo ```\main.py```.
+>A resolução padrão configurada para este projeto é de 1252x652 para melhor visualização do labirinto. Caso a resolução do seu sistema seja menor, sinta-se livre para mudar os parâmetros de ```altura``` e ```largura``` presentes nas primeiras linhas do arquivo ```\main.py```.
 
 ```bash
 pip install pygame
