@@ -13,36 +13,58 @@ Jorginho é um filhote de ET muito serelepinho e está brincando de esconde-esco
 
 Boa sorte nessa empreitada!
 
-![image](https://user-images.githubusercontent.com/72039007/202893447-1cedf015-e4c2-4f64-b5c7-bdd6b920acd0.png)
+![image](./img/etzinho.png)
 ### *Imagem 1* - Jorginho, o filhote de ET
-![image](https://user-images.githubusercontent.com/72039007/202893608-f4568f45-de4f-43ad-830c-508ff0e7bb3d.png)
+![image](./img/bondeDosET.png)
 ### *Imagem 2* - Amiguinhos do Jorginho
-![image](https://user-images.githubusercontent.com/72039007/202893769-13ab8a38-4e6e-4038-8290-48d59ce26833.png)
+![image](./img/pacman.png)
 ### *Imagem 3* - PAC-MAN locão
 
 # Imagens do jogo
 
 ## 1) Menu inicial
-![MenuInicial](https://user-images.githubusercontent.com/72039007/202893880-9fcfddc5-380c-422a-ab0d-5ef7ba77c096.png)
+![MenuInicial](./screenshots/menu_inicial.png)
 ### *Imagem 4* - Menu inicial do Neon Game
 
 ## 2) Labirinto (Aleatório)
-![LabirintoNeonGame](https://user-images.githubusercontent.com/72039007/202893948-eb9756a3-f6be-442a-9681-4e31857556c7.png)
+![LabirintoNeonGame](./screenshots/labirinto.png)
 ### *Imagem 5* - Labirinto aleatório gerado por DFS & Backtraking
 
 ## 3) Tela de Vitória
-![image](https://user-images.githubusercontent.com/72039007/202894613-18a6324a-d0e6-41be-9d80-01e792196d01.png)
+![image](./screenshots/tela_de_vitoria.png)
 ### *Imagem 6* - Reconhecimento dos amiguinhos quando o jorginho vence
 # Instalação 
 **Linguagem**: Pyhton<br>
-**Bibliotecas**: PyGame e button <br>
+**Bibliotecas**: PyGame<br>
 
 >A resolução padrão configurada para este projeto é de 1252x652 para melhor visualização do labirinto. Caso a resolução do seu sistema seja menor, sinta-se livre para mudar os parâmetros de ```altura``` e ```largura``` presentes nas primeiras linhas do arquivo ```\main.py```.
 
+- ### Windows
+Baixe o pacote Python3 do [site official](https://www.python.org/downloads/), e no momento da instação, marque a opção "Add Python to PATH" para no próximo passo instalar as dependências via terminal e rodar o nosso jogo.
+
+- ### Linux
+Execute no terminal do linux a atualização dos pacotes e instalação do python3
+
+```bash
+sudo apt update
+sudo apt install python3
+sudo apt install python3-pip
+```
+- ### Ambos os sistemas
+Executar no terminal:
+
 ```bash
 pip install pygame
-python main.py
 ```
-
+# Execução
+Abra um terminal na pasta raiz onde foram salvos os arquivos do projeto e execute o comando:
+```
+python ./main.py
+```
+ou 
+```
+python3 ./main.py
+```
+dependendo de alguma instalação prévia do Python.
 # Uso 
 O jorginho pode ser movimentando usando as teclas W(cima), A(esquerda), S(embaixo) e D(direita) e também usando os direcionais do teclado. Divirta-se!
